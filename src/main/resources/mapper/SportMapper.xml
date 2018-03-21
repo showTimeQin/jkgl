@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.showtime.jkgl.mapper.SportMapper" >
+  <resultMap id="BaseResultMap" type="com.showtime.jkgl.model.entity.Sport" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="sport_name" property="sportName" jdbcType="VARCHAR" />
+    <result column="sports_category" property="sportsCategory" jdbcType="INTEGER" />
+    <result column="sport_risk" property="sportRisk" jdbcType="INTEGER" />
+    <result column="sport_time" property="sportTime" jdbcType="INTEGER" />
+    <result column="sport_frequency" property="sportFrequency" jdbcType="VARCHAR" />
+    <result column="tensile_site" property="tensileSite" jdbcType="VARCHAR" />
+    <result column="action_method" property="actionMethod" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

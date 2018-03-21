@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://www.boohee.com/profile/login -->
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="/js/jquery.min.js"/>
+    <script type="text/javascript" src="../js/a1d178eeb3"></script>
+    <script src="../js/nr-1071.min.js"></script>
+    <script src="../js/hm.js"></script>
+    <script src="../js/hm(1).js"></script>
+    <script type="text/javascript">window.NREUM || (NREUM = {});
+    NREUM.info = {
+        "beacon": "bam.nr-data.net",
+        "errorBeacon": "bam.nr-data.net",
+        "licenseKey": "a1d178eeb3",
+        "applicationID": "23590140",
+        "transactionName": "JlpaQUsKCF4DEx0VQwpTXVlcSghdAQhc",
+        "queueTime": 0,
+        "applicationTime": 16,
+        "agent": ""
+    }</script>
+    <script type="text/javascript">window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) {
+        function r(n) {
+            if (!t[n]) {
+                var o = t[n] = {exports: {}};
+                e[n][0].call(o.exports, function (t) {
+                    var o = e[n][1][t];
+                    return r(o || t)
+                }, o, o.exports)
+            }
+            return t[n].exports
+        }
+
+        if ("function" == typeof __nr_require) return __nr_require;
+        for (var o = 0; o < n.length; o++) r(n[o]);
+        return r
+    }({
+        1: [function (e, t, n) {
+            function r() {
+            }
+
+            function o(e, t, n) {
+                return function () {
+                    return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this
+                }
+            }
+
+            var i = e("handle"), a = e(2), u = e(3), c = e("ee").get("tracer"), f = e("loader"), s = NREUM;
+            "undefined" == typeof window.newrelic && (newrelic = s);
+            var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                d = "api-", l = d + "ixn-";
+            a(p, function (e, t) {
+                s[t] = o(d + t, !0, "api")
+            }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function () {
+                return (new r).get()
+            };
+            var m = r.prototype = {
+                createTracer: function (e, t) {
+                    var n = {}, r = this, o = "function" == typeof t;
+                    return i(l + "tracer", [f.now(), e, n], r), function () {
+                        if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try {
+                            return t.apply(this, arguments)
+                        } catch (e) {
+                            throw c.emit("fn-err", [arguments, this, e], n), e
+                        } finally {
+                            c.emit("fn-end", [f.now()], n)
+                        }
+                    }
+                }
+            };
+            a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) {
+                m[t] = o(l + t)
+            }), newrelic.noticeError = function (e) {
+                "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()])
+            }
+        }, {}], 2: [function (e, t, n) {
+            function r(e, t) {
+                var n = [], r = "", i = 0;
+                for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1);
+                return n
+            }
+
+            var o = Object.prototype.hasOwnProperty;
+            t.exports = r
+        }, {}], 3: [function (e, t, n) {
+            function r(e, t, n) {
+                t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
+                for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[t + r];
+                return i
+            }
+
+            t.exports = r
+        }, {}], 4: [function (e, t, n) {
+            t.exports = {exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart}
+        }, {}], ee: [function (e, t, n) {
+            function r() {
+            }
+
+            function o(e) {
+                function t(e) {
+                    return e && e instanceof r ? e : e ? c(e, u, i) : i()
+                }
+
+                function n(n, r, o, i) {
+                    if (!d.aborted || i) {
+                        e && e(n, r, o);
+                        for (var a = t(o), u = m(n), c = u.length, f = 0; f < c; f++) u[f].apply(a, r);
+                        var p = s[y[n]];
+                        return p && p.push([b, n, r, a]), a
+                    }
+                }
+
+                function l(e, t) {
+                    v[e] = m(e).concat(t)
+                }
+
+                function m(e) {
+                    return v[e] || []
+                }
+
+                function w(e) {
+                    return p[e] = p[e] || o(n)
+                }
+
+                function g(e, t) {
+                    f(e, function (e, n) {
+                        t = t || "feature", y[n] = t, t in s || (s[t] = [])
+                    })
+                }
+
+                var v = {}, y = {},
+                    b = {on: l, emit: n, get: w, listeners: m, context: t, buffer: g, abort: a, aborted: !1};
+                return b
+            }
+
+            function i() {
+                return new r
+            }
+
+            function a() {
+                (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+            }
+
+            var u = "nr@context", c = e("gos"), f = e(2), s = {}, p = {}, d = t.exports = o();
+            d.backlog = s
+        }, {}], gos: [function (e, t, n) {
+            function r(e, t, n) {
+                if (o.call(e, t)) return e[t];
+                var r = n();
+                if (Object.defineProperty && Object.keys) try {
+                    return Object.defineProperty(e, t, {value: r, writable: !0, enumerable: !1}), r
+                } catch (i) {
+                }
+                return e[t] = r, r
+            }
+
+            var o = Object.prototype.hasOwnProperty;
+            t.exports = r
+        }, {}], handle: [function (e, t, n) {
+            function r(e, t, n, r) {
+                o.buffer([e], r), o.emit(e, t, n)
+            }
+
+            var o = e("ee").get("handle");
+            t.exports = r, r.ee = o
+        }, {}], id: [function (e, t, n) {
+            function r(e) {
+                var t = typeof e;
+                return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () {
+                    return o++
+                })
+            }
+
+            var o = 1, i = "nr@id", a = e("gos");
+            t.exports = r
+        }, {}], loader: [function (e, t, n) {
+            function r() {
+                if (!x++) {
+                    var e = h.info = NREUM.info, t = d.getElementsByTagName("script")[0];
+                    if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return s.abort();
+                    f(y, function (t, n) {
+                        e[t] || (e[t] = n)
+                    }), c("mark", ["onload", a() + h.offset], null, "api");
+                    var n = d.createElement("script");
+                    n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t)
+                }
+            }
+
+            function o() {
+                "complete" === d.readyState && i()
+            }
+
+            function i() {
+                c("mark", ["domContent", a() + h.offset], null, "api")
+            }
+
+            function a() {
+                return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - h.offset
+            }
+
+            var u = (new Date).getTime(), c = e("handle"), f = e(2), s = e("ee"), p = window, d = p.document,
+                l = "addEventListener", m = "attachEvent", w = p.XMLHttpRequest, g = w && w.prototype;
+            NREUM.o = {
+                ST: setTimeout,
+                SI: p.setImmediate,
+                CT: clearTimeout,
+                XHR: w,
+                REQ: p.Request,
+                EV: p.Event,
+                PR: p.Promise,
+                MO: p.MutationObserver
+            };
+            var v = "" + location, y = {
+                    beacon: "bam.nr-data.net",
+                    errorBeacon: "bam.nr-data.net",
+                    agent: "js-agent.newrelic.com/nr-1071.min.js"
+                }, b = w && g && g[l] && !/CriOS/.test(navigator.userAgent),
+                h = t.exports = {offset: u, now: a, origin: v, features: {}, xhrWrappable: b};
+            e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m]("onreadystatechange", o), p[m]("onload", r)), c("mark", ["firstbyte", u], null, "api");
+            var x = 0, E = e(4)
+        }, {}]
+    }, {}, ["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>薄荷网：健康减肥工具，专业瘦身指导，清新减肥网站</title>
+    <meta name="description" content="引领健康减肥潮流，薄荷网为您提供量身定制的减肥方案，简单有效的减肥工具，辅以瘦身课程、减肥论坛和食物热量查询等服务，让您瘦得健康，瘦得漂亮！">
+    <meta name="keywords" content="减肥,健康减肥,瘦身,减肥方法,食物热量,标准体重,减肥论坛,薄荷瘦身网">
+    <meta name="verify-v1" content="WPvgwdf4aqsujE8987ZHPpBNvtHguD/yT9AaQdi784c=">
+    <meta name="apple-itunes-app" content="app-id=457856023">
+    <meta name="mobile-agent" content="format=xhtml;url=http://i.boohee.com">
+    <title>欢迎登录薄荷</title>
+    <link enablehash="true" href="../css/core_04dd3fa328cb8cc1b8cbb3b6aa1383f1.css"
+          media="screen" rel="stylesheet" type="text/css">
+    <link enablehash="true"
+          href="../css/boohee_v2_3431623d4a5e92d6e8a57239a085ed2e.css" media="screen"
+          rel="stylesheet" type="text/css">
+    <link enablehash="true" href="../css/sign_befbe107bd0388b2c8a63dfe6376f2e7.css"
+          media="screen" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-size: 14px;
+        }
+
+        a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        .widget-header {
+            background: #242424;
+        }
+
+        .sign-panel {
+            position: absolute;
+            width: 100%;
+            top: 46%;
+            margin-top: -155px;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="http://s.boohee.cn/javascripts/v1/ext/html5shiv.min.js"></script>
+    <script src="http://s.boohee.cn/javascripts/v1/ext/respond.min.js"></script>
+    <link href="http://s.boohee.cn/javascripts/v1/ext/respond-proxy.html" id="respond-proxy" rel="respond-proxy"/>
+    <link href="/javascripts/v1/ext/respond.proxy.gif" id="respond-redirect" rel="respond-redirect"/>
+    <script src="/javascripts/v1/ext/respond.proxy.js"></script>
+    <![endif]-->
+    <script>
+        var _hmt = _hmt || [];
+        _hmt.push(['_setCustomVar', 1, 'login', '0', 2]);
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?7263598dfd4db0dc29539a51f116b23a";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <script type="text/javascript">
+        try {
+            window._BH_RESPONSE = {} || {};
+        } catch (e) {
+        }
+    </script>
+
+    <script>
+        $(function(){
+            $('#confirm_password').blur(confirmPassword);
+        });
+        function confirmPassword(){
+            var password =$("#password").val();
+            var confirm_password =$("#confirm_password").val();
+            $.post("/admin/confirmPassword",{password: password, confirm_password : confirm_password}, function(data,status){
+                if(data == "index"){
+                    window.location.href = "http://localhost:8081/index";
+                }
+                $("#msgpwd").html(data);
+            });
+        }
+
+
+
+    </script>
+</head>
+<body id="profile_login">
+<div id="wrapper">
+    <#include "../header.html"/>
+    <div id="main">
+        <div class="sign-panel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1">
+                        <form accept-charset="UTF-8" action="/admin/update"
+                              class="widget-login widget-sign-form" id="form-login" method="post">
+                            <div style="margin:0;padding:0;display:inline">
+                                <input name="utf8" type="hidden" value="✓">
+                                <input name="authenticity_token" type="hidden"
+                                       value="+jvo8AtSAoYGEBBCvq0sHSPJ4qE4/G4dU4+giFnpa6I=">
+                            </div>
+                            <dl>
+                                <dt class="clearfix">
+                                    <h4 class="title">信息修改</h4>
+                                </dt>
+                                <dd class="field-box">
+                                    <span class="iconfont icon-lock"></span>
+                                    <input class="form-text" id="password" name="password" size="24" type="password"
+                                           placeholder="密码">
+                                </dd>
+                                <dd class="field-box">
+                                    <span class="iconfont icon-lock"></span>
+                                    <input id="confirm_password" name="confirm_password" size="24" type="password" placeholder="确认密码">
+                                </dd>
+                                <dd class="field-box">
+                                    <span class="iconfont icon-email"></span>
+                                    <input id="email" name="email" size="24" type="text" placeholder="邮箱">
+                                </dd>
+                                <dd id="msgname" style="display: block;">${msgemail!""}</dd>
+                                <dd id="msgpwd" style="display: block;">${msgpwd!""}</dd>
+                                <dd>
+                                    <button id="btn-submit" class="btn btn-hot btn-submit">修改</button>
+                                </dd>
+                            </dl>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="ext">
+
+    </div>
+</div>
+<script enablehash="true" src="../js/core_9fc4e0a2332f6a408c5fb1e2b8a17f16.js"
+        type="text/javascript"></script>
+<script enablehash="true" src="../js/boohee_1fbe85f6eb3eefef604d66c185c4d461.js"
+        type="text/javascript"></script>
+<script enablehash="true" src="../js/sign_1e0aebe7e4e23851e22460e921b36db2.js"
+        type="text/javascript"></script>
+
+<script>
+    ;(function () {
+        $(document).ready(function () {
+            $(".app_ad .close_button").click(function (e) {
+                e.preventDefault();
+
+                $(this).parent().hide();
+                $.post("/app/hide_banner", {}, null);
+            });
+            $(".app_ad a").click(function (e) {
+               var tip = $('.app_ad .app_download_tip'),
+                    url = $(this).attr('href');
+                if (tip.length > 0) {
+                    e.preventDefault();
+                    tip.show();
+                    setTimeout(function () {
+                        tip.hide();
+                        location.href = url;
+                    }, 3000)
+                }
+            });
+        })
+    })();
+</script>
+
+
+<div style="position: static; width: 0px; height: 0px; border: none; padding: 0px; margin: 0px;">
+    <div id="trans-tooltip">
+        <div id="tip-left-top"
+             style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left-top.png&quot;);"></div>
+        <div id="tip-top"
+             style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-top.png&quot;) repeat-x;"></div>
+        <div id="tip-right-top"
+             style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right-top.png&quot;);"></div>
+        <div id="tip-right"
+             style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right.png&quot;) repeat-y;"></div>
+        <div id="tip-right-bottom"
+             style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right-bottom.png&quot;);"></div>
+        <div id="tip-bottom"
+             style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-bottom.png&quot;) repeat-x;"></div>
+        <div id="tip-left-bottom"
+             style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left-bottom.png&quot;);"></div>
+        <div id="tip-left"
+             style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left.png&quot;);"></div>
+        <div id="trans-content"></div>
+    </div>
+    <div id="tip-arrow-bottom"
+         style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-arrow-bottom.png&quot;);"></div>
+    <div id="tip-arrow-top"
+         style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-arrow-top.png&quot;);"></div>
+</div>
+<a data-cltversion="1.0.6" data-cltsource="400002" data-cltuuid="ext5WtlgAw65eKgdKTmkgbubchFyVlYdwNG3" data-cltats="4"
+   href="javascript:" id="tools-nav-explugin" style="display: none;"></a></body>
+</html>

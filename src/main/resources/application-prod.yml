@@ -1,0 +1,11 @@
+server:
+  #服务器的端口号
+  port: 8081
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://104.238.134.112:3306/jkgl
+    username: showtime
+    password: showtime

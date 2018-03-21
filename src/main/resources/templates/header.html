@@ -1,0 +1,61 @@
+<div id="header">
+    <div class="container-fluid widget-header">
+        <div class="navbar">
+            <div class="container">
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav mainnav">
+                        <li class=""><a href="http://localhost:8081/index"><span>膳食库</span></a></li>
+                        <#if admin??>
+                            <li class=""><a href="http://localhost:8081/admin/message"><span>管理员信息</span></a></li>
+                        <#elseif adviser?exists>
+                            <li class=""><a href="http://localhost:8081/adviser/message"><span>顾问信息</span></a></li>
+                        </#if>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <#if admin?exists>
+                            <!--已经登陆-->
+                            <li class="unlogin">
+                                <a href="/profile/index">${admin.account}</a>
+                                <span class="sep">|</span>
+                                <a href="/admin/logout" >登出</a>
+                            </li>
+                        <#elseif adviser?exists>
+                            <li class="unlogin">
+                                <a href="/profile/index" >${adviser.account}</a>
+                                <span class="sep">|</span>
+                                <a href="/adviser/logout" >登出</a>
+                            </li>
+                        <#else>
+                            <!--未登录-->
+                            <li class="unlogin">
+                                <a class="login" href="http://localhost:8081/login">登录</a>
+                                <span class="sep">|</span>
+                                <a class="register" href="http://localhost:8081/adviser/register">注册</a>
+                            </li>
+                        </#if>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div class="widget-search-form widget-header-form">
+        <!--<div class="container">-->
+            <!--<div class="content">-->
+                <!--<h1>超过30万种食物的数据</h1>-->
+                <!--<form action="http://www.boohee.com/food/search" method="get" autocomplete="off" name="search_form"-->
+                      <!--id="search_form" class="widget-form">-->
+                    <!--<label for="keyword" class="placeholder"><span class="iconfont iconfont-search2"></span>搜索食物查询热量</label>-->
+                    <!--<input id="keyword" name="keyword" class="textbox input-large" type="text" maxlength="60">-->
+                    <!--<button type="submit" class="bh-btn btn-submit">搜索</button>-->
+                    <!--<div class="suggest-wrap">-->
+                        <!--<ul id="suggest_output" class="suggest" style="display: none;"><span id="be_replace"></span>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>

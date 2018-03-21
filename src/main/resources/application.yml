@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+  freemarker:
+    suffix: .html
+mybatis:
+  type-aliases-package: com.showtime.jkgl.model.entity
+  mapper-locations: classpath:mapper/*.xml
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+telephone: 13226661877
+

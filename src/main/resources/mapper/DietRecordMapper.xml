@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.showtime.jkgl.mapper.DietRecordMapper" >
+  <resultMap id="BaseResultMap" type="com.showtime.jkgl.model.entity.DietRecord" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="time" property="time" jdbcType="VARCHAR" />
+    <result column="times" property="times" jdbcType="DATE" />
+    <result column="detail" property="detail" jdbcType="VARCHAR" />
+    <result column="file_no" property="fileNo" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

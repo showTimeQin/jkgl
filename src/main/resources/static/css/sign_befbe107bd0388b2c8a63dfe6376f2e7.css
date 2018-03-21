@@ -1,0 +1,197 @@
+.widget-sign-form {
+    border: 1px #ddd solid;
+    border-width: 0 0 0 1px;
+    padding: 10px 0 1px 70px;
+    margin-left: 20px;
+    margin-right: 15px
+}
+
+.widget-sign-form a {
+    color: #35B0EA
+}
+
+.widget-sign-form a:hover {
+    color: #1488bf
+}
+
+.widget-sign-form dt {
+    margin-bottom: 30px
+}
+
+.widget-sign-form dd {
+    position: relative
+}
+
+.widget-sign-form dd.captcha-box .inner {
+    float: left;
+    border: 1px #ddd solid;
+    border-width: 1px
+}
+
+.widget-sign-form dd.captcha-box .img-box {
+    width: 100px;
+    height: 43px;
+    float: right;
+    position: relative
+}
+
+.widget-sign-form dd.captcha-box input {
+    float: left;
+    width: 150px;
+    padding-left: 10px;
+    border: none;
+    border: 1px #ddd solid;
+    border-width: 0 1px 0 0
+}
+
+.widget-sign-form dd.captcha-box img {
+    height: 30px;
+    margin: 8px auto
+}
+
+.widget-sign-form dd.captcha-box p {
+    float: left;
+    margin-top: 10px;
+    margin-left: 15px
+}
+
+.widget-sign-form .input-box {
+    position: relative
+}
+
+.widget-sign-form input[type="text"], .widget-sign-form input[type="password"] {
+    width: 100%;
+    border: none;
+    padding: 11px 10px 11px 46px;
+    font-size: 16px;
+    border: 1px #ddd solid;
+    border-width: 0 0 1px 0
+}
+
+.widget-sign-form input[type="text"].warning, .widget-sign-form input[type="password"].warning {
+    border-bottom-color: #ff4c4b
+}
+
+.widget-sign-form #msg {
+    text-align: left;
+    position: relative;
+    color: #ff4c4b;
+    display: none;
+    text-align: center
+}
+
+.widget-sign-form .btn-submit {
+    width: 100%
+}
+
+.widget-sign-form .forgot {
+    float: right
+}
+
+.widget-sign-form .title {
+    float: left;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400
+}
+
+.widget-sign-form .register {
+    float: right;
+    font-weight: 400
+}
+
+.widget-sign-form .agreement {
+    margin-left: 5px
+}
+
+.widget-sign-form .iconfont {
+    font-size: 28px;
+    color: #aeaeae;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    margin-top: -21px
+}
+
+@media (min-width: 1px) {
+    .widget-sign-form dd {
+        margin-bottom: 15px
+    }
+}
+
+@media (min-width: 1px) {
+    .widget-sign-form dd {
+        margin-bottom: 15px
+    }
+}
+
+@media (min-width: 1330px) {
+    .widget-sign-form dd {
+        margin-bottom: 20px
+    }
+}
+
+.widget-third-part {
+    text-align: left;
+    padding-top: 10px;
+    margin-right: 20px;
+    margin-left: 15px
+}
+
+.widget-third-part dt {
+    margin-bottom: 30px
+}
+
+.widget-third-part dd {
+    margin-bottom: 20px
+}
+
+.widget-third-part .title {
+    text-align: left;
+    font-size: 14px
+}
+
+.widget-third-part .btn {
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    padding: 4px 15px;
+    position: relative
+}
+
+.widget-third-part .iconfont {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    font-size: 22px;
+    margin-left: 15px;
+    color: #fff
+}
+
+.widget-third-part .iconfont:before {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -15px
+}
+
+html, body {
+    height: 100%;
+    width: 100%
+}
+
+#wrapper {
+    min-height: 800px;
+    height: 100%;
+    position: relative
+}
+
+#footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0
+}
+
+#main {
+    min-height: 538px
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.showtime.jkgl.mapper.DietStorageMapper" >
+  <resultMap id="BaseResultMap" type="com.showtime.jkgl.model.entity.DietStorage" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+    <result column="spell" property="spell" jdbcType="VARCHAR" />
+    <result column="energy" property="energy" jdbcType="VARCHAR" />
+    <result column="classification" property="classification" jdbcType="VARCHAR" />
+    <result column="content_type" property="contentType" jdbcType="VARCHAR" />
+    <result column="fat" property="fat" jdbcType="DECIMAL" />
+    <result column="cellulose" property="cellulose" jdbcType="DECIMAL" />
+    <result column="vitamin_c" property="vitaminC" jdbcType="DECIMAL" />
+    <result column="renieratene" property="renieratene" jdbcType="DECIMAL" />
+    <result column="riboflavin" property="riboflavin" jdbcType="DECIMAL" />
+    <result column="cholesterol" property="cholesterol" jdbcType="DECIMAL" />
+    <result column="calcium" property="calcium" jdbcType="DECIMAL" />
+    <result column="zinc" property="zinc" jdbcType="DECIMAL" />
+    <result column="manganese" property="manganese" jdbcType="DECIMAL" />
+    <result column="phosphorus" property="phosphorus" jdbcType="DECIMAL" />
+    <result column="selenium" property="selenium" jdbcType="DECIMAL" />
+    <result column="carbohydrate" property="carbohydrate" jdbcType="DECIMAL" />
+    <result column="protein" property="protein" jdbcType="DECIMAL" />
+    <result column="vitamin_a" property="vitaminA" jdbcType="DECIMAL" />
+    <result column="vitamin_e" property="vitaminE" jdbcType="DECIMAL" />
+    <result column="thiamine" property="thiamine" jdbcType="DECIMAL" />
+    <result column="niacin" property="niacin" jdbcType="DECIMAL" />
+    <result column="magnesium" property="magnesium" jdbcType="DECIMAL" />
+    <result column="iron" property="iron" jdbcType="DECIMAL" />
+    <result column="copper" property="copper" jdbcType="DECIMAL" />
+    <result column="potassium" property="potassium" jdbcType="DECIMAL" />
+    <result column="sodium" property="sodium" jdbcType="DECIMAL" />
+  </resultMap>
+
+  <insert id="InsertBatch" useGeneratedKeys="true" parameterType="java.util.List">
+    <selectKey resultType="long" keyProperty="id" order="AFTER">
+      SELECT
+      LAST_INSERT_ID()
+    </selectKey>
+    insert into diet_storage (name, nick_name, spell, energy, classification, content_type, fat, cellulose, vitamin_c, renieratene, riboflavin, cholesterol, calcium, zinc, manganese, phosphorus, selenium, carbohydrate, protein, vitamin_a, vitamin_e, thiamine, niacin, magnesium, iron, copper, potassium, sodium)
+    values
+    <foreach collection="list" item="item" index="index" separator="," >
+      (#{item.name},#{item.nickName},#{item.spell},#{item.energy},#{item.classification},#{item.contentType},#{item.fat},#{item.cellulose},#{item.vitaminC},#{item.renieratene},#{item.riboflavin},#{item.cholesterol},#{item.calcium},#{item.zinc},#{item.manganese},#{item.phosphorus},#{item.selenium},#{item.carbohydrate},#{item.protein},#{item.vitaminA},#{item.vitaminE},#{item.thiamine},#{item.niacin},#{item.magnesium},#{item.iron},#{item.copper},#{item.potassium},#{item.sodium})
+    </foreach>
+  </insert>
+</mapper>

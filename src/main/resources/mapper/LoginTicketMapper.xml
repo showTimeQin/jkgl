@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.showtime.jkgl.mapper.LoginTicketMapper" >
+  <resultMap id="BaseResultMap" type="com.showtime.jkgl.model.entity.LoginTicket" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="account_id" property="accountId" jdbcType="BIGINT" />
+    <result column="role" property="role" jdbcType="TINYINT" />
+    <result column="expired" property="expired" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="ticket" property="ticket" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
