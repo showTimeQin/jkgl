@@ -9,21 +9,21 @@
     <result column="username" property="username" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
-    <result column="gender" property="gender" jdbcType="INTEGER" />
-    <result column="tel" property="tel" jdbcType="INTEGER" />
-    <result column="nation" property="nation" jdbcType="DATE" />
+    <result column="gender" property="gender" jdbcType="VARCHAR" />
+    <result column="tel" property="tel" jdbcType="VARCHAR" />
+    <result column="nation" property="nation" jdbcType="VARCHAR" />
     <result column="birthday" property="birthday" jdbcType="VARCHAR" />
-    <result column="email" property="email" jdbcType="INTEGER" />
-    <result column="card_type" property="cardType" jdbcType="INTEGER" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="card_type" property="cardType" jdbcType="VARCHAR" />
     <result column="cardID" property="cardid" jdbcType="VARCHAR" />
     <result column="house_tel" property="houseTel" jdbcType="VARCHAR" />
     <result column="file_reason" property="fileReason" jdbcType="VARCHAR" />
     <result column="complication" property="complication" jdbcType="VARCHAR" />
     <result column="house_address" property="houseAddress" jdbcType="VARCHAR" />
     <result column="unit_address" property="unitAddress" jdbcType="VARCHAR" />
-    <result column="edu_background" property="eduBackground" jdbcType="INTEGER" />
+    <result column="edu_background" property="eduBackground" jdbcType="VARCHAR" />
     <result column="position" property="position" jdbcType="VARCHAR" />
-    <result column="marital_status" property="maritalStatus" jdbcType="INTEGER" />
+    <result column="marital_status" property="maritalStatus" jdbcType="VARCHAR" />
     <result column="usual_type" property="usualType" jdbcType="VARCHAR" />
     <result column="birthplace" property="birthplace" jdbcType="VARCHAR" />
     <result column="file_status" property="fileStatus" jdbcType="VARCHAR" />

@@ -11,21 +11,21 @@ CREATE TABLE IF NOT EXISTS `user`(
   `username` VARCHAR(64) NOT NULL COMMENT '账号',
   `password` VARCHAR(64) NOT NULL COMMENT '密码',
   `name` VARCHAR(32) NOT NULL COMMENT '姓名',
-  `gender` INT COMMENT '性别',
-  `tel` INT COMMENT '手机号',
-  `nation` DATE COMMENT '民族',
+  `gender` VARCHAR(32) COMMENT '性别',
+  `tel` VARCHAR(32) COMMENT '手机号',
+  `nation` VARCHAR(32) COMMENT '民族',
   `birthday` VARCHAR(32) COMMENT '出生日期',
-  `email` INT COMMENT '邮箱',
-  `card_type` INT COMMENT '证件类别',
+  `email` VARCHAR(32) COMMENT '邮箱',
+  `card_type` VARCHAR(32) COMMENT '证件类别',
   `cardID` VARCHAR(32) COMMENT '证件号',
   `house_tel` VARCHAR(32) COMMENT '家庭电话',
   `file_reason` VARCHAR(32) COMMENT '建档原因',
   `complication` VARCHAR(32) COMMENT '并发症',
   `house_address` VARCHAR(32) COMMENT '家庭地址',
   `unit_address` VARCHAR(32) COMMENT '单位地址',
-  `edu_background` INT COMMENT '文化程度',
+  `edu_background` VARCHAR(32) COMMENT '文化程度',
   `position` VARCHAR(32) COMMENT '职业',
-  `marital_status` INT COMMENT '婚姻状况',
+  `marital_status` VARCHAR(32) COMMENT '婚姻状况',
   `usual_type` VARCHAR(32) COMMENT '常住类型',
   `birthplace` VARCHAR(32) COMMENT '籍贾',
   `file_status` VARCHAR(32) COMMENT '档案状态',
@@ -143,7 +143,19 @@ CREATE TABLE IF NOT EXISTS `health_scheme`(
 
   `user_file_no` VARCHAR(64) COMMENT '用户档案号',
   `diet_storage_ids` VARCHAR(512) COMMENT '膳食编号[1,2,3]',
+  `quantitys` VARCHAR(512) COMMENT '数量[1杯,1碗]',
   `date` DATE COMMENT '日期',
   `eat_time` TINYINT COMMENT '1:早餐 2:午餐 3:晚餐',
   `adviser_id` VARCHAR(64) COMMENT '顾问主键'
 )ENGINE INNODB DEFAULT CHARSET=utf8 COMMENT='健康方案表' AUTO_INCREMENT=1;
+
+DROP TABLE IF EXISTS `session_log`;
+CREATE TABLE IF NOT EXISTS `session_log`(
+  `id` BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT '表主键',
+
+  `user_file_no` BIGINT UNSIGNED COMMENT '用户档案号',
+  `sender` BIGINT UNSIGNED COMMENT '发送者',
+  `content` VARCHAR(512) COMMENT '内容',
+  `time` TIMESTAMP COMMENT '时间',
+  `adviser_id` BIGINT UNSIGNED COMMENT '顾问主键'
+)ENGINE INNODB DEFAULT CHARSET=utf8 COMMENT='对话记录' AUTO_INCREMENT=1;

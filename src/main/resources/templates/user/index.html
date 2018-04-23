@@ -1,0 +1,228 @@
+<html>
+<#include "head.html"/>
+<body>
+<div class="page" style="margin:0;">
+    <#include "swiper.html"/>
+    <#include "scrollNews.html"/>
+    <div class="content" style="width:100%; min-height:350px;margin-top: -30px;">
+        <#include "catalogue.html"/>
+        <ul class="neir" style="width:95%; margin-left:2%;border: rgba(37, 195, 137, 0) 1px solid;overflow:hidden; min-height:240px;padding-bottom: 80px;" id="ul2">
+            <!-- 健康方案管理 -->
+            <li class="active">
+                <div class="row" style="min-height: 330px;">
+                    <!-- 所有功能 -->
+                    <a href="" class="item_one" style="display: block;" data-type="all">
+                        <img class="gntub" src="../img/sj/tu1.png">
+                        <div class="tet2">
+                            <span>全部功能</span>
+                        </div>
+                    </a>
+
+                    <!--最新功能-->
+                    <a href="" class="item_one" style="display: block;" data-new="new">
+                        <img class="gntub" src="../img/sj/tu5.png">
+                        <div class="tet2">
+                            <span>最新功能</span>
+                        </div>
+                    </a>
+                    <!--最新功能 end-->
+                    <!--宣传展示类-->
+                    <a href="" class="item_one" style="display: block;" data-type="0" >
+                        <img class="gntub" src="../img/sj/tu2.png">
+                        <div class="tet2">
+                            <span>宣传展示</span>
+                        </div>
+                    </a>
+                    <!--宣传展示类 end-->
+                    <!--推广吸粉类-->
+                    <a href="" class="item_one" style="display: block;" data-type="1">
+                        <img class="gntub" src="../img/sj/tu3.png">
+                        <div class="tet2">
+                            <span>推广吸粉</span>
+                        </div>
+                    </a>
+                    <!--推广吸粉类 end-->
+                    <!--营销活动类-->
+                    <a href="" class="item_one" style="display: block;" data-type="2">
+                        <img class="gntub" src="../img/sj/tu4.png">
+                        <div class="tet2">
+                            <span>推广吸粉</span>
+                        </div>
+                    </a>
+                    <!--营销活动类 end-->
+                    <!--电商交易类-->
+                    <a href="" class="item_one" style="display: block;" data-type="3">
+                        <img class="gntub" src="../img/sj/tu1.png">
+                        <div class="tet2">
+                            <span>寿司大串杀</span>
+                        </div>
+                    </a>
+                    <a href="" class="item_one" style="display: block;" data-type="3">
+                        <img class="gntub" src="../img/sj/tu1.png">
+                        <div class="tet2">
+                            <span>电商交易</span>
+                        </div>
+                    </a>
+                    <!--电商交易类 end-->
+                    <!--行业功能类-->
+                    <a href="" class="item_one" style="display: block;" data-type="4">
+                        <img class="gntub" src="../img/sj/tu1.png">
+                        <div class="tet2">
+                            <span>行业功能</span>
+                        </div>
+                    </a>
+                    <!--行业功能类 end-->
+                    <!--会员管理类-->
+                    <a href="" class="item_one" style="display: block;" data-type="5">
+                        <img class="gntub" src="../img/sj/tu3.png">
+                        <div class="tet2">
+                            <span>会员管理</span>
+                        </div>
+                    </a>
+                    <!--会员管理类 end-->
+                    <!--其他功能类-->
+                    <a href="" class="item_one" style="display: block;" data-type="6">
+                        <img class="gntub" src="../img/sj/tu4.png">
+                        <div class="tet2">
+                            <span>其他功能</span>
+                        </div>
+                    </a>
+                    <!--其他功能类 end-->
+                </div>
+                <div class="fixedBar">
+                    <div class="SubLinks">
+                        <ul>
+                            <li><a href="javascript:;" onclick="tagsFilter($(this),'all')">全部功能</a></li>
+                            <li><a href="javascript:;" onclick="tagsFilter($(this),'new')">最新功能</a></li>
+                            <li><a href="javascript:;" onclick="tagsFilter($(this),0)">宣传展示类</a></li>
+                            <li><a href="javascript:;" onclick="tagsFilter($(this),1)">推广吸粉类</a></li>
+                        </ul>
+                        <span class="triangle"></span>
+                    </div>
+                    <a class="aClick" href="javascript:;"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--<script>-->
+    <!--var mySwiper = new Swiper('.swiper-container', {-->
+        <!--pagination: '.points',-->
+        <!--loop: true,-->
+        <!--autoplay: 3000,-->
+        <!--grabCursor: true,-->
+        <!--paginationClickable: true-->
+    <!--});-->
+    <!--$('.arrow-left').on('click',-->
+            <!--function(e) {-->
+                <!--e.preventDefault();-->
+                <!--mySwiper.swipePrev()-->
+            <!--});-->
+    <!--$('.arrow-right').on('click',-->
+            <!--function(e) {-->
+                <!--e.preventDefault();-->
+                <!--mySwiper.swipeNext()-->
+            <!--});-->
+    <!--var mySwiper2 = new Swiper('#slides', {-->
+        <!--pagination: false,-->
+        <!--paginationClickable: true,-->
+    <!--});-->
+    <!--$('.prev').on('click',-->
+            <!--function(e) {-->
+                <!--e.preventDefault();-->
+                <!--mySwiper2.swipePrev()-->
+            <!--});-->
+    <!--$('.next').on('click',-->
+            <!--function(e) {-->
+                <!--e.preventDefault();-->
+                <!--mySwiper2.swipeNext()-->
+            <!--});-->
+    <!--//tab切换-->
+    <!--window.onload = function() {-->
+        <!--var a=$("#slides a");-->
+        <!--var b=$(".neir>li");-->
+        <!--var c='active';-->
+        <!--tab(a,b,c);-->
+    <!--};-->
+    <!--function tab(a,b,c){-->
+        <!--var len=$(a);-->
+        <!--len.bind("click",function(){-->
+            <!--var index = 0;-->
+            <!--$(this).addClass(c).siblings().removeClass(c);-->
+            <!--index = len.index(this);-->
+            <!--$(b).eq(index).show().siblings().hide();-->
+            <!--return false;-->
+        <!--}).eq(0).trigger("click");-->
+    <!--}-->
+    <!--$(function(){-->
+        <!--$(".newTit .moreLink>a").click(function(){-->
+            <!--if($(this).hasClass('on')){-->
+                <!--$(this).removeClass('on').next().hide();-->
+            <!--}else{-->
+                <!--$(this).addClass('on').next().show();-->
+            <!--}-->
+        <!--});-->
+        <!--$(".fixedBar a.aClick").click(function() {-->
+            <!--$(".fixedBar .SubLinks").toggle();-->
+            <!--return false;-->
+        <!--});-->
+    <!--});-->
+    <!--$(".neir .row a[data-new=new]").show();//默认显示最新的项目-->
+    <!--function tagsFilter(obja,type){//obja是当前的a标签，type是项目类型从0-6，all,new,all是所有项目，new是最新的-->
+           <!--var oText=obja.text();-->
+           <!--var newTit=$('.newTit h3').text(oText);-->
+           <!--$(".item_one").hide();-->
+           <!--if(typeof type === 'number'){-->
+           <!--$(".neir .row a[data-type="+type+"]").show();-->
+           <!--}else if(type === 'all'){-->
+             <!--$(".item_one").show();-->
+           <!--}else if(type==='new'){-->
+             <!--$(".neir .row a[data-new=new]").show();-->
+           <!--}-->
+           <!--$(".fixedBar .SubLinks").hide();-->
+           <!--$(".newTit .moreLink>a").removeClass('on').next().hide();-->
+           <!--$("html,body").stop().animate({scrollTop:$(".newTit").offset().top},1000);-->
+    <!--}-->
+<!--//    function tagsFilter(obja,data){-->
+<!--//        var oText=obja.text();-->
+<!--//        var newTit=$('.newTit h3').text(oText);-->
+<!--//        var tokenn='yicms';-->
+<!--//        $.ajax({-->
+<!--//            type:"post",-->
+<!--//            url:"ajax地址",-->
+<!--//            dataType:"json",-->
+<!--//            data:{-->
+<!--//                info:data-->
+<!--//            },-->
+<!--//            success:function(sta){-->
+<!--//                // alert(sta);-->
+<!--//                $(".row").html(sta)-->
+<!--//                $(".fixedBar .SubLinks").hide();-->
+<!--//                $(".newTit .moreLink>a").removeClass('on').next().hide();-->
+<!--//                $("html,body").stop().animate({scrollTop:$(".newTit").offset().top},1000);-->
+<!--//            }-->
+<!--//        })-->
+<!--//    }-->
+    <!--$(function(){-->
+        <!--var $this = $(".scrollNews");-->
+        <!--var t=null;-->
+        <!--$this.hover(function(){-->
+            <!--clearInterval(t);-->
+        <!--},function(){-->
+            <!--t = setInterval(function(){-->
+                <!--scrollNews( $this );-->
+            <!--}, 4000 );-->
+        <!--}).trigger("mouseleave");-->
+    <!--});-->
+    <!--function scrollNews(obj){-->
+        <!--var $self = obj.find(".yy");-->
+        <!--var lineHeight = $self.find(".tongzhi").eq(0).height();-->
+        <!--$self.animate({"marginTop": -lineHeight +"px"}, 600 , function(){-->
+            <!--$self.css({marginTop:0}).find(".tongzhi").eq(0).appendTo($self);-->
+        <!--})-->
+    <!--}-->
+<!--</script>-->
+
+</body>
+</html>

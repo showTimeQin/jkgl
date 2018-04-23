@@ -98,4 +98,13 @@ public class EnergyMeasurement {
     public void setEnergy(String energy) {
         this.energy = energy;
     }
+
+    public EnergyMeasurement() {
+    }
+
+    public EnergyMeasurement(EnergyMeasurement e) {
+        this.foodStorageId = e.foodStorageId;
+        this.measurement = e.measurement;
+        this.energy = e.energy;
+    }
 }

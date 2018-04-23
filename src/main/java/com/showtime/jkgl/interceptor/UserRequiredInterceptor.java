@@ -12,15 +12,15 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @Component
-public class TeacherRequiredInterceptor implements HandlerInterceptor {
+public class UserRequiredInterceptor implements HandlerInterceptor {
 
     @Autowired
     private HostHolder hostHolder;
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        if (hostHolder.getAdviser() == null) {
-            httpServletResponse.sendRedirect("/login");
+        if (hostHolder.getUser() == null) {
+            httpServletResponse.sendRedirect("/user/login");
             return false;
         }
         return true;

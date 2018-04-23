@@ -77,7 +77,7 @@ public class PassportInterceptor implements HandlerInterceptor {
                 Admin admin = adminMapper.selectByPrimaryKey(loginTicket.getAccountId());
                 hostHolder.setAdmin(admin);
             }else if(TicketRoleConstant.USER.equals(loginTicket.getRole())){
-                User user = userMapper.selectByPrimaryKey(loginTicket.getAccountId());
+                User user = userMapper.selectByPrimaryKey((loginTicket.getAccountId()).intValue());
                 hostHolder.setUser(user);
             }else if(TicketRoleConstant.ADVISER.equals(loginTicket.getRole())){
                 Adviser adviser = adviserMapper.selectByPrimaryKey(loginTicket.getAccountId());

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<#include "head.html"/>
+<body>
+<div class="page" style="margin:0;">
+    <#include "swiper.html"/>
+    <#include "scrollNews.html"/>
+    <div class="content" style="width:100%; min-height:350px;margin-top: -30px;">
+        <#include "catalogue.html"/>
+        <ul class="neir" style="width:95%; margin-left:2%;border: rgba(37, 195, 137, 0) 1px solid;overflow:hidden; min-height:240px;padding-bottom: 80px;" id="ul2">
+            <!-- 用户信息 -->
+            <li class="active">
+                <div class="one_itme" id="li_three">
+                    <div class="list_onell">
+                        <!--<div class="list_one_picll">-->
+                        <!--<img class="banner_pic1" src="../img/sj/two6.png">-->
+                        <!--</div>-->
+                        <form accept-charset="UTF-8" action="/user/messageUpdate"
+                              class="widget-login widget-sign-form" id="form-login" method="post">
+                            <input type="submit" value="修改">
+                            <div class="list_one_txtll">
+                                <input type="hidden" name="id" value="${user.fileNo!""}">
+                                姓名:<input type="text" id="name" name="name" value="${user.name!""}">
+                                <br><br>
+                                性别:<input type="text" id="gender" name="gender"  value="${user.gender!""}">
+                                <br><br>
+                                手机号:<input type="text" id="tel" name="tel" value="${user.tel!""}">
+                                <br><br>
+                                民族:<input type="text" id="nation" name="nation"  value="${user.nation!""}">
+                                <br><br>
+                                出生日期:<input type="text" id="birthday" name="birthday"  value="${user.birthday!""}">
+                                <br><br>
+                                邮箱:<input type="text" id="email" name="email" value="${user.email!""}">
+                                <br><br>
+                                证件类别:<input type="text" id="cardType" name="cardType" value="${user.cardType!""}">
+                                <br><br>
+                                证件号:<input type="text" id="cardid" name="cardid" value="${user.cardid!""}">
+                                <br><br>
+                                家庭电话:<input type="text" id="houseTel" name="houseTel" value="${user.houseTel!""}">
+                                <br><br>
+                                建档原因:<input type="text" id="fileReason" name="fileReason" value="${user.fileReason!""}">
+                                <br><br>
+                                并发症:<input type="text" id="complication" name="complication" value="${user.complication!""}">
+                                <br><br>
+                                家庭地址:<input type="text" id="houseAddress" name="houseAddress" value="${user.houseAddress!""}">
+                                <br><br>
+                                单位地址:<input type="text" id="unitAddress" name="unitAddress" value="${user.unitAddress!""}">
+                                <br><br>
+                                文化程度:<input type="text" id="eduBackground" name="eduBackground" value="${user.eduBackground!""}">
+                                <br><br>
+                                职业:<input type="text" id="position" name="position" value="${user.position!""}">
+                                <br><br>
+                                婚姻状况:<input type="text" id="maritalStatus" name="maritalStatus" value="${user.maritalStatus!""}">
+                                <br><br>
+                                常住类型:<input type="text" id="usualType" name="usualType" value="${user.usualType!""}">
+                                <br><br>
+                                籍贾:<input type="text" id="birthplace" name="birthplace" value="${user.birthplace!""}">
+                                <br><br>
+                                档案状态:<input type="text" id="fileStatus" name="fileStatus" value="${user.fileStatus!""}">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

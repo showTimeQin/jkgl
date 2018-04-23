@@ -8,6 +8,7 @@
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="user_file_no" property="userFileNo" jdbcType="VARCHAR" />
     <result column="diet_storage_ids" property="dietStorageIds" jdbcType="VARCHAR" />
+    <result column="quantitys" property="quantitys" jdbcType="VARCHAR" />
     <result column="date" property="date" jdbcType="DATE" />
     <result column="eat_time" property="eatTime" jdbcType="TINYINT" />
     <result column="adviser_id" property="adviserId" jdbcType="VARCHAR" />

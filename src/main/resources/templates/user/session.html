@@ -1,0 +1,77 @@
+<html>
+<#include "head.html"/>
+<body>
+    <div class="page" style="margin:0;">
+        <#include "swiper.html"/>
+        <#include "scrollNews.html"/>
+        <div class="content" style="width:100%; min-height:350px;margin-top: -30px;">
+            <#include "catalogue.html"/>
+            <ul class="neir" style="width:95%; margin-left:2%;border: rgba(37, 195, 137, 0) 1px solid;overflow:hidden; min-height:240px;padding-bottom: 80px;" id="ul2">
+                <!-- 健康咨询 -->
+                <li class="active">
+                    <#if error??>
+                        <div class="container">
+                            <div class="row clearfix">
+                                <div class="col-md-12 column">
+                                    <form role="form" class="form-inline" action="/user/selectAdviser" method="post">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="account" />
+                                        </div>
+                                        <button type="submit" class="btn btn-default">选择</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <dd id="error" style="display: block;">${error!""}</dd>
+                        <#else>
+                            <div class="container">
+                                <div class="row clearfix">
+                                    <div class="col-md-12 column">
+                                        <form role="form" class="form-inline" action="/user/send" method="post">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="content" />
+                                            </div>
+                                            <button type="submit" class="btn btn-default">发送</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="one_itmelll" id="li_four">
+                                <div class="list_onell">
+                                    <#list sessionLogs as item>
+                                        <#if item.sender == item.userFileNo>
+                                            <!-- Right -->
+                                            <div class="receiver">
+                                                <div>
+                                                    <img src="http://img.zcool.cn/community/01460b57e4a6fa0000012e7ed75e83.png@1280w_1l_2o_100sh.png">
+                                                </div>
+                                                <div>
+                                                    <div class="right_triangle"></div>
+                                                    <span> ${item.content!""} </span>
+                                                </div>
+                                            </div>
+                                        </#if>
+                                        <#if item.sender == item.adviserId>
+                                            <!-- Left -->
+                                            <div class="sender">
+                                                <div>
+                                                    <img src="http://img.zcool.cn/community/01460b57e4a6fa0000012e7ed75e83.png@1280w_1l_2o_100sh.png">
+                                                </div>
+                                                <div>
+                                                    <div class="left_triangle"></div>
+                                                    <span> ${item.content!""} </span>
+                                                </div>
+                                            </div>
+                                        </#if>>
+                                    </#list>
+                                </div>
+                            </div>
+
+                    </#if>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

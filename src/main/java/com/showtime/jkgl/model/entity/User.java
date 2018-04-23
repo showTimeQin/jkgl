@@ -1,6 +1,5 @@
 package com.showtime.jkgl.model.entity;
 
-import java.util.Date;
 import javax.persistence.*;
 
 public class User {
@@ -29,17 +28,17 @@ public class User {
     /**
      * 性别
      */
-    private Integer gender;
+    private String gender;
 
     /**
      * 手机号
      */
-    private Integer tel;
+    private String tel;
 
     /**
      * 民族
      */
-    private Date nation;
+    private String nation;
 
     /**
      * 出生日期
@@ -49,13 +48,13 @@ public class User {
     /**
      * 邮箱
      */
-    private Integer email;
+    private String email;
 
     /**
      * 证件类别
      */
     @Column(name = "card_type")
-    private Integer cardType;
+    private String cardType;
 
     /**
      * 证件号
@@ -96,7 +95,7 @@ public class User {
      * 文化程度
      */
     @Column(name = "edu_background")
-    private Integer eduBackground;
+    private String eduBackground;
 
     /**
      * 职业
@@ -107,7 +106,7 @@ public class User {
      * 婚姻状况
      */
     @Column(name = "marital_status")
-    private Integer maritalStatus;
+    private String maritalStatus;
 
     /**
      * 常住类型
@@ -208,7 +207,7 @@ public class User {
      *
      * @return gender - 性别
      */
-    public Integer getGender() {
+    public String getGender() {
         return gender;
     }
 
@@ -217,7 +216,7 @@ public class User {
      *
      * @param gender 性别
      */
-    public void setGender(Integer gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -226,7 +225,7 @@ public class User {
      *
      * @return tel - 手机号
      */
-    public Integer getTel() {
+    public String getTel() {
         return tel;
     }
 
@@ -235,7 +234,7 @@ public class User {
      *
      * @param tel 手机号
      */
-    public void setTel(Integer tel) {
+    public void setTel(String tel) {
         this.tel = tel;
     }
 
@@ -244,7 +243,7 @@ public class User {
      *
      * @return nation - 民族
      */
-    public Date getNation() {
+    public String getNation() {
         return nation;
     }
 
@@ -253,7 +252,7 @@ public class User {
      *
      * @param nation 民族
      */
-    public void setNation(Date nation) {
+    public void setNation(String nation) {
         this.nation = nation;
     }
 
@@ -280,7 +279,7 @@ public class User {
      *
      * @return email - 邮箱
      */
-    public Integer getEmail() {
+    public String getEmail() {
         return email;
     }
 
@@ -289,7 +288,7 @@ public class User {
      *
      * @param email 邮箱
      */
-    public void setEmail(Integer email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -298,7 +297,7 @@ public class User {
      *
      * @return card_type - 证件类别
      */
-    public Integer getCardType() {
+    public String getCardType() {
         return cardType;
     }
 
@@ -307,7 +306,7 @@ public class User {
      *
      * @param cardType 证件类别
      */
-    public void setCardType(Integer cardType) {
+    public void setCardType(String cardType) {
         this.cardType = cardType;
     }
 
@@ -424,7 +423,7 @@ public class User {
      *
      * @return edu_background - 文化程度
      */
-    public Integer getEduBackground() {
+    public String getEduBackground() {
         return eduBackground;
     }
 
@@ -433,7 +432,7 @@ public class User {
      *
      * @param eduBackground 文化程度
      */
-    public void setEduBackground(Integer eduBackground) {
+    public void setEduBackground(String eduBackground) {
         this.eduBackground = eduBackground;
     }
 
@@ -460,7 +459,7 @@ public class User {
      *
      * @return marital_status - 婚姻状况
      */
-    public Integer getMaritalStatus() {
+    public String getMaritalStatus() {
         return maritalStatus;
     }
 
@@ -469,7 +468,7 @@ public class User {
      *
      * @param maritalStatus 婚姻状况
      */
-    public void setMaritalStatus(Integer maritalStatus) {
+    public void setMaritalStatus(String maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
 

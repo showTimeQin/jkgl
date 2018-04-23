@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<#include "head.html"/>
+<body>
+    <div class="page" style="margin:0;">
+        <#include "swiper.html"/>
+        <#include "scrollNews.html"/>
+        <div class="content" style="width:100%; min-height:350px;margin-top: -30px;">
+            <#include "catalogue.html"/>
+            <ul class="neir" style="width:95%; margin-left:2%;border: rgba(37, 195, 137, 0) 1px solid;overflow:hidden; min-height:240px;padding-bottom: 80px;" id="ul2">
+                <!-- 用户信息 -->
+                <li class="active">
+                    <div class="one_itme" id="li_three">
+                        <div class="list_onell">
+                            <!--<div class="list_one_picll">-->
+                            <!--<img class="banner_pic1" src="../img/sj/two6.png">-->
+                            <!--</div>-->
+                            <a href="http://localhost:8081/user/messageUpdate">修改</a> |
+                            <a href="http://localhost:8081/user/logout">登出</a>
+                            <div class="list_one_txtll">
+                                <span class="list_h1ll">姓名:${user.name!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">性别:${user.gender!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">手机号:${user.tel!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">民族:${user.nation!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">出生日期:${user.birthday!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">邮箱:${user.email!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">证件类别:${user.cardType!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">证件号:${user.cardid!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">家庭电话:${user.houseTel!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">建档原因:${user.fileReason!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">并发症:${user.complication!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">家庭地址:${user.houseAddress!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">单位地址:${user.unitAddress!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">文化程度:${user.eduBackground!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">职业:${user.position!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">婚姻状况:${user.maritalStatus!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">常住类型:${user.usualType!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">籍贾:${user.birthplace!""}</span>
+                                <br><br>
+                                <span class="list_h1ll">档案状态:${user.fileStatus!""}</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

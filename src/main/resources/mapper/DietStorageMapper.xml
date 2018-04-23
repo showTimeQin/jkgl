@@ -47,4 +47,6 @@
       (#{item.name},#{item.nickName},#{item.spell},#{item.energy},#{item.classification},#{item.contentType},#{item.fat},#{item.cellulose},#{item.vitaminC},#{item.renieratene},#{item.riboflavin},#{item.cholesterol},#{item.calcium},#{item.zinc},#{item.manganese},#{item.phosphorus},#{item.selenium},#{item.carbohydrate},#{item.protein},#{item.vitaminA},#{item.vitaminE},#{item.thiamine},#{item.niacin},#{item.magnesium},#{item.iron},#{item.copper},#{item.potassium},#{item.sodium})
     </foreach>
   </insert>
+
+  <select id="selectByIds" parameterType="java.util.List" resultType="java.util.List">
 </mapper>

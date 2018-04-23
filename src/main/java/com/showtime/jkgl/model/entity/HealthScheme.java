@@ -25,6 +25,11 @@ public class HealthScheme {
     private String dietStorageIds;
 
     /**
+     * 数量[1杯,1碗]
+     */
+    private String quantitys;
+
+    /**
      * 日期
      */
     private Date date;
@@ -93,6 +98,24 @@ public class HealthScheme {
      */
     public void setDietStorageIds(String dietStorageIds) {
         this.dietStorageIds = dietStorageIds;
+    }
+
+    /**
+     * 获取数量[1杯,1碗]
+     *
+     * @return quantitys - 数量[1杯,1碗]
+     */
+    public String getQuantitys() {
+        return quantitys;
+    }
+
+    /**
+     * 设置数量[1杯,1碗]
+     *
+     * @param quantitys 数量[1杯,1碗]
+     */
+    public void setQuantitys(String quantitys) {
+        this.quantitys = quantitys;
     }
 
     /**
