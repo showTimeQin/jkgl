@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.showtime.jkgl.mapper.SessionLogMapper" >
+  <resultMap id="BaseResultMap" type="com.showtime.jkgl.model.entity.SessionLog" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="user_file_no" property="userFileNo" jdbcType="BIGINT" />
+    <result column="sender" property="sender" jdbcType="BIGINT" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
+    <result column="adviser_id" property="adviserId" jdbcType="BIGINT" />
+  </resultMap>
+</mapper>
